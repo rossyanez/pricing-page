@@ -5,3 +5,7 @@
 * {
   font-family: "Inter Variable", sans-serif;
 }
+
+ul {
+  list-style-image: url("/src/icons/CheckIcon.jsx");
+}
