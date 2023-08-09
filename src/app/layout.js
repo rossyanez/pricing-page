@@ -6,7 +6,7 @@ import "@fontsource-variable/inter";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Pricing Page",
+  title: "Pricing Page - Ross Y.",
   description: "Practice project.",
 };
 
