@@ -1,131 +1,136 @@
 import MenuItem from "@/components/MenuItem";
+import Banner from "@/components/header/Banner";
 import Nav from "@/components/header/nav/Nav";
+import PricingSection from "@/components/main/PricingSection";
+import ArrowRightIcon from "@/icons/ArrowRightIcon";
+import BarChartIcon from "@/icons/BarChartIcon";
 import CheckIcon from "@/icons/CheckIcon";
+import CommandIcon from "@/icons/CommandIcon";
 import HamburgerMenu from "@/icons/HamburgerMenu";
+import MailIcon from "@/icons/MailIcon";
+import MessageCircleIcon from "@/icons/MessageCircleIcon";
+import SmileIcon from "@/icons/SmileIcon";
+import ZapIcon from "@/icons/ZapIcon";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="md:w-[1440px] md:mx-auto">
       <Nav />
-      <div className="flex flex-col py-16 md:py-24">
-        <div className="mx-4 md:my-24 md:px-8 md:mx-20 md:w-[1216px] md:h-[150px]">
-          <h2 className="text-purple-600 text-[14px]">Pricing</h2>
-          <h1 className="text-gray-900 text-[36px] font-semibold mt-3 mb-4">
-            Simple, transparent pricing
-          </h1>
-          <p className="leading-7 text-[18px] text-gray-500">
-            We believe Untitled should be accessible to all companies, no matter
-            the size.
+      <Banner />
+      <PricingSection />
+      {/* Playground */}
+
+      <div className="flex py-24 px-0 flex-col items-center gap-16 self-stretch ">
+        <div className="flex px-0 py-8 flex-col items-start gap-8 w-[1280px]">
+          <h2 className="text-purple-700 self-stretch text-base font-semibold leading-6">
+            Features
+          </h2>
+          <h3 className="text-gray-900 text-4xl leading-[44px] tracking-[0.72px]">
+            Beautiful analytics to grow smarter
+          </h3>
+          <p>
+            Powerful, self-serve product and growth analytics to help you
+            convert, engage, and retain more users. Trusted by over 4,000
+            startups.
           </p>
         </div>
-      </div>
-      {/* Playground */}
-      {/* card container */}
-      <div className="flex items-center flex-col gap-y-4 md:flex-row md:gap-y-8 flex-1 my-auto md:justify-center md:w-[1440px] md:h-[510px]">
-        <div className="flex items-center flex-col text-center border rounded-2xl mx-4 shadow-custom w-[343px] h-[486px] md:w-[384px] md:h-[510px]">
-          <div className="pt-10 px-6">
-            <p className="text-gray-900 text-4xl tracking-[.72px]">$10/mth</p>
-            <p className="text-gray-900 text-xl mt-4">Basic plan</p>
-            <p className="text-gray-500 text-base">Billed Annually</p>
+        <div className="flex w-[1280px] px-8 py-0 flex-col items-start gap-16">
+          <div className="flex items-start gap-8 self-stretch">
+            <div className="flex-[1_0_0%] flex-col items-start gap-5">
+              <MailIcon className="p-3 rounded-3xl bg-purple-100" />
+              <h4 className="text-gray-900 text-xl font-medium leading-[30px]">
+                Share team inboxes
+              </h4>
+              <p className="text-base font-normal leading-6">
+                Whether you have a team of 2 or 200, our shared team inboxes
+                keep everyone on the same page and in the loop.
+              </p>
+              <p className="flex items-center gap-2">
+                Learn more
+                <ArrowRightIcon />
+              </p>
+            </div>
+
+            <div className="flex-[1_0_0%] flex-col items-start gap-5">
+              <ZapIcon className="p-3 rounded-3xl bg-purple-100" />
+              <h4 className="text-gray-900 text-xl font-medium leading-[30px]">
+                Deliver instant answers
+              </h4>
+              <p className="text-base font-normal leading-6">
+                An all-in-one customer service platform that helps you balance
+                everything your customers need to be happy.
+              </p>
+              <p className="flex items-center gap-2">
+                Learn more
+                <ArrowRightIcon />
+              </p>
+            </div>
+
+            <div className="flex-[1_0_0%] flex-col items-start gap-5">
+              <BarChartIcon className="p-3 rounded-3xl bg-purple-100" />
+              <h4 className="text-gray-900 text-xl font-medium leading-[30px]">
+                Manage your team with reports
+              </h4>
+              <p className="text-base font-normal leading-6">
+                Measure what matters with Untitled’s easy-to-use reports. You
+                can filter, export, and drilldown on the data in a couple
+                clicks.
+              </p>
+              <p className="flex items-center gap-2">
+                Learn more
+                <ArrowRightIcon />
+              </p>
+            </div>
           </div>
-          <div>
-            <ul className="text-gray-500 leading-6 flex flex-col gap-y-4 px-6 py-8 ">
-              <li className="flex items-center gap-x-3">
-                <CheckIcon /> Access to all basic features
-              </li>
-              <li className="flex items-center gap-x-3 gap-y-4">
-                <CheckIcon />
-                Basic reporting and analytics
-              </li>
-              <li className="flex items-center gap-x-3 gap-y-4">
-                <CheckIcon />
-                Up to 10 individual users
-              </li>
-              <li className="flex items-center gap-x-3 gap-y-4">
-                <CheckIcon />
-                20GB individual data each user
-              </li>
-              <li className="flex items-center gap-x-3 gap-y-4">
-                <CheckIcon />
-                Basic chat and email support
-              </li>
-            </ul>
-          </div>
-          <div className="px-6 pb-8">
-            <button className="bg-purple-600 text-white w-[255] h-[24] px-4 py-3 rounded-lg border self-stretch">
-              Get started
-            </button>
-          </div>
-        </div>
-        <div className="flex items-center flex-col text-center border rounded-2xl mx-4 shadow-custom w-[360px] h-[510px]">
-          <div className="pt-10 px-6">
-            <p className="text-gray-900 text-4xl tracking-[.72px]">$20/mth</p>
-            <p className="text-gray-900 text-xl mt-4">Business plan</p>
-            <p className="text-gray-500 text-base">Billed Annually</p>
-          </div>
-          <div>
-            <ul className="text-gray-500 leading-6 flex flex-col gap-y-4 px-6 py-8">
-              <li className="flex items-center gap-x-3">
-                <CheckIcon /> 200+ integrations
-              </li>
-              <li className="flex items-center gap-x-3 gap-y-4">
-                <CheckIcon />
-                Advanced reporting and analytics
-              </li>
-              <li className="flex items-center gap-x-3 gap-y-4">
-                <CheckIcon />
-                Up to 20 individual users
-              </li>
-              <li className="flex items-center gap-x-3 gap-y-4">
-                <CheckIcon />
-                40GB individual data each user
-              </li>
-              <li className="flex items-center gap-x-3 gap-y-4">
-                <CheckIcon />
-                Priority chat and email support
-              </li>
-            </ul>
-          </div>
-          <div className="px-6 pb-8">
-            <button className="bg-purple-600 text-white w-[255] h-[24] px-4 py-3 rounded-lg border self-stretch">
-              Get started
-            </button>
-          </div>
-        </div>
-        <div className="flex items-center flex-col text-center border rounded-2xl mx-4 shadow-custom w-[360px] h-[510px]">
-          <div className="pt-10 px-6">
-            <p className="text-gray-900 text-4xl tracking-[.72px]">$40/mth</p>
-            <p className="text-gray-900 text-xl mt-4">Enterprise plan</p>
-            <p className="text-gray-500 text-base">Billed Annually</p>
-          </div>
-          <div>
-            <ul className="text-gray-500 leading-6 flex flex-col gap-y-4 px-6 py-8">
-              <li className="flex items-center gap-x-3">
-                <CheckIcon /> Advanced custom fields
-              </li>
-              <li className="flex items-center gap-x-3 gap-y-4">
-                <CheckIcon />
-                Audit log and data history
-              </li>
-              <li className="flex items-center gap-x-3 gap-y-4">
-                <CheckIcon />
-                Unlimited individual users
-              </li>
-              <li className="flex items-center gap-x-3 gap-y-4">
-                <CheckIcon />
-                Unlimited individual data
-              </li>
-              <li className="flex items-center gap-x-3 gap-y-4">
-                <CheckIcon />
-                Personalised+priotity service
-              </li>
-            </ul>
-          </div>
-          <div className="px-6 pb-8">
-            <button className="bg-purple-600 text-white w-[255] h-[24] px-4 py-3 rounded-lg border self-stretch">
-              Get started
-            </button>
+          <div className="flex items-start gap-8 self-stretch">
+            <div className="flex-[1_0_0%] flex-col items-start gap-5">
+              <SmileIcon className="p-3 rounded-3xl bg-purple-100" />
+              <h4 className="text-gray-900 text-xl font-medium leading-[30px]">
+                Connect with customers
+              </h4>
+              <p className="text-base font-normal leading-6">
+                Solve a problem or close a sale in real-time with chat. If no
+                one is available, customers are seamlessly routed to email
+                without confusion.
+              </p>
+              <p className="flex items-center gap-2">
+                Learn more
+                <ArrowRightIcon />
+              </p>
+            </div>
+
+            <div className="flex-[1_0_0%] flex-col items-start gap-5">
+              <CommandIcon className="p-3 rounded-3xl bg-purple-100" />
+              <h4 className="text-gray-900 text-xl font-medium leading-[30px]">
+                Connect the tools you already use
+              </h4>
+              <p className="text-base font-normal leading-6">
+                Explore 100+ integrations that make your day-to-day workflow
+                more efficient and familiar. Plus, our extensive developer
+                tools.
+              </p>
+              <p className="flex items-center gap-2">
+                Learn more
+                <ArrowRightIcon />
+              </p>
+            </div>
+
+            <div className="flex-[1_0_0%] flex-col items-start gap-5">
+              <MessageCircleIcon className="p-3 rounded-3xl bg-purple-100" />
+              <h4 className="text-gray-900 text-xl font-medium leading-[30px]">
+                Our people make the difference
+              </h4>
+              <p className="text-base font-normal leading-6">
+                We’re an extension of your customer service team, and all of our
+                resources are free. Chat to our friendly team 24/7 when you need
+                help.
+              </p>
+              <p className="flex items-center gap-2">
+                Learn more
+                <ArrowRightIcon />
+              </p>
+            </div>
           </div>
         </div>
       </div>
